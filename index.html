@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+
+
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script> var assert = chai.assert;</script>
+
+</head>
+<body>
+
+<script>
+    function startTests() {
+        mocha.run();
+    }
+</script>
+<!--<button onclick="startTests()">STARTTEST</button>-->
+<div id="mocha"></div>
+
+
+<div class="calc" id="calc">
+    <div class="out" id="out">
+        <input type="text" class="tablo" id="talo" readonly value="0" >
+    </div>
+    <div class="calc__menu">
+        <div class="calc__row">
+            <button class="btn" id="1">1</button>
+            <button class="btn" id="2">2</button>
+            <button class="btn" id="3">3</button>
+            <button class="btn_op" id="divideBtn">%</button>
+        </div>
+        <div class="calc__row">
+            <button class="btn" id="4">4</button>
+            <button class="btn" id="5">5</button>
+            <button class="btn" id="6">6</button>
+            <button class="btn_op" id="multiplyBtn">&#215</button>
+        </div>
+        <div class="calc__row">
+            <button class="btn" id="7">7</button>
+            <button class="btn" id="8">8</button>
+            <button class="btn" id="9">9</button>
+            <button class="btn_op" id="minusBtn">-</button>
+        </div>
+        <div class="calc__row">
+            <button class="bigbutton btn" id="0">0</button>
+            <button class="btn1" id="dub">.</button>
+            <button class="btn_op" id="plusBtn">+</button>
+        </div>
+        <div class="calc__row">
+            <button class="bigbuttonend" id="equally">=</button>
+            <button class="bigbuttonend" id="del">C</button>
+        </div>
+</div>
+    <script src="js/main.js"> </script>
+    <script src="test/test.js"> </script>
+</body>
+</html>
